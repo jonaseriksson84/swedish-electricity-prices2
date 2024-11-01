@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PriceChart from '../components/PriceChart';
+---
+
+<Layout title="Swedish Electricity Prices">
+	<main>
+		<div class="price-viewer">
+			<PriceChart client:load />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 100%;
+		max-width: 1200px;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.price-viewer {
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 8px;
+		padding: 2rem;
+		margin-top: 2rem;
+	}
+</style>
